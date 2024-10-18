@@ -2,24 +2,6 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-
-    .container > div {
-      flex: 0 0 30%; /* Adjusts each div to take up around 30% of the container's width */
-      margin: 5px;
-    }
-
-    @media screen and (max-width: 615px) {
-      .container > div {
-        flex: 0 0 100%; /* Stacks divs vertically on screens smaller than 768px */
-      }
-    }
-  </style>
 </head>
 <body>
   <div class="container">
@@ -81,4 +63,27 @@
     <!-- TradingView Widget 3 END -->
   </div>
 </body>
+
+<style>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.container > div {
+  flex: 0 0 32%; /* Adjusts each div to take up around 30% of the container's width */
+  margin: 5px;
+}
+
+.tradingview-widget-container > iframe {
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 615px) {
+  .container > div {
+    flex: 0 0 100%; /* Stacks divs vertically on screens smaller than 768px */
+  }
+}
+</style>
 </html>

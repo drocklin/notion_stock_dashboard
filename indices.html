@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .container > div {
+      flex: 0 0 30%; /* Adjusts each div to take up around 30% of the container's width */
+      margin: 10px;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container > div {
+        flex: 0 0 100%; /* Stacks divs vertically on screens smaller than 768px */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- TradingView Widget 1 BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {
+      "symbol": "VANTAGE:SP500",
+      "width": 350,
+      "height": 220,
+      "locale": "en",
+      "dateRange": "12M",
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "autosize": false,
+      "largeChartUrl": ""
+      }
+      </script>
+    </div>
+    <!-- TradingView Widget 1 END -->
+
+    <!-- TradingView Widget 2 BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {
+      "symbol": "BLACKBULL:US30",
+      "width": 350,
+      "height": 220,
+      "locale": "en",
+      "dateRange": "12M",
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "autosize": false,
+      "largeChartUrl": ""
+      }a
+      </script>
+    </div>
+    <!-- TradingView Widget 2 END -->
+
+    <!-- TradingView Widget 3 BEGIN -->
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+      {
+      "symbol": "NASDAQ:NDX",
+      "width": 350,
+      "height": 220,
+      "locale": "en",
+      "dateRange": "12M",
+      "colorTheme": "dark",
+      "isTransparent": false,
+      "autosize": false,
+      "largeChartUrl": ""
+      }
+      </script>
+    </div>
+    <!-- TradingView Widget 3 END -->
+  </div>
+</body>
+</html>
